@@ -1,13 +1,14 @@
 
 <!doctype html>
 <html lang="en">
+  {% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Viswa</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     
@@ -37,12 +38,12 @@
   </head>
   <body>
     <header>
-        <nav class="nav">
-            <a class="navbar-brand href="#">Viswa</a>
+        <nav class="nav bg-dark">
+            <a class="navbar-brand" href="{% url 'home' %}">Viswa</a>
             <div class="navbar ml-auto">
-                    <a class="nav-link" href="#">Twitter</a>
-                    <a class="nav-link" href="#">Resume</a>
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a>
+                    <a class="nav-item nav-link" href="{% static 'froknowsphoto_guide-1.pdf' %}">Resume</a>
+                    <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
             </div>            
         </nav>
 </header>
@@ -56,6 +57,7 @@
       <p>
         <a href="mailto: gv.chaitanya8@gmail.com" class="btn btn-primary my-2">Email me</a>
       </p>
+      <img src="{% static 'IMG_31501.jpg' %}" height=300 />
     </div>
   </section>
 
